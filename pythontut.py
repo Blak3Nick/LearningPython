@@ -10,3 +10,9 @@ with open('potus_visitors_2015.csv') as csv_file:
         date = row[2]
         date = dt.datetime.strptime(date, date_format)
         row[2] = date
+    date = potus[1][2]
+    hour = dt.datetime.strftime(date, "%H")
+    print(hour)
+print('newline')
+hour1 = dt.datetime.strptime('15', '%H')
+print(dt.datetime.strftime(hour1, "%H:%M"))

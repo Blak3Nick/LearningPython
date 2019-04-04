@@ -13,3 +13,15 @@ financial_data = f500.loc[:, "revenues":"profit_change"]
 countries = f500.country
 revenues_years = f500[["revenues", "years_on_global_500_list"]]
 ceo_to_sector = f500.loc[:, "ceo": "sector"]
+
+
+ceos = f500["ceo"]
+walmart = ceos["Walmart"]
+apple_to_samsung = ceos["Apple":"Samsung Electronics"]
+oil_companies = ceos[["Exxon Mobil", "BP", "Chevron"] ]
+chevron = ceos["BP"]
+drink_companies = f500.loc[["Anheuser-Busch InBev", "Coca-Cola", "Heineken Holding"]]
+big_movers = f500.loc[["Aviva", "HP", "JD.com", "BHP Billiton"]]
+big_movers = big_movers[["rank", "previous_rank"]]
+middle_companies = f500.loc["Tata Motors":"Nationwide"]
+middle_companies = middle_companies.loc[:, "rank":"country"]

@@ -75,3 +75,12 @@ plt.title("Monthly Unemployment Trends, 1948-1952")
 plt.xlabel('Month, Integer')
 plt.ylabel('Unemployment Rate, Percent')
 plt.show()
+
+#
+reviews = pd.read_csv('fandango_scores.csv')
+cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue']
+norm_reviews = reviews[cols]
+
+fandango_distribution = norm_reviews["Fandango_Ratingvalue"].value_counts().sort_index()
+imdb_distribution = norm_reviews["IMDB_norm"].value_counts().sort_index()
+print(fandango_distribution)
